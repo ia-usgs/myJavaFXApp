@@ -24,18 +24,17 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        float a=Float.parseFloat(BMITextfield1.getText());
-        float b=Float.parseFloat(BMITextfield2.getText());
+        float a=Float.parseFloat(BMITextfield2.getText());
+        float b=Float.parseFloat(BMITextfield1.getText());
         float bmi=b/(a*a);
         BMIMessageLabel.setText("" + bmi);
 
         if (bmi <= 18) {
             Alert z = new Alert(Alert.AlertType.WARNING);
-            z.setContentText("Please consult a doctor immediatly!");
+            z.setContentText("Please consult a doctor immediately!");
             z.setAlertType(Alert.AlertType.WARNING);
             z.show();
             BMIMessageLabel2.setText(" You are Seriously Underweight");
-
         } else if (bmi <= 18.5) {
             BMIMessageLabel2.setText("You are Underweight");
         } else if (bmi <= 24.9) {
@@ -44,7 +43,7 @@ public class HelloController {
             BMIMessageLabel2.setText("You are Overweight");
         } else {
             Alert z = new Alert(Alert.AlertType.WARNING);
-            z.setContentText("Please consult a doctor immediatly!");
+            z.setContentText("Please consult a doctor immediately!");
             z.setAlertType(Alert.AlertType.WARNING);
             z.show();
             BMIMessageLabel2.setText("You are Obese");
