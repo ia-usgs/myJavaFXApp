@@ -30,9 +30,9 @@
             <font>
                <Font size="18.0" />
             </font></Label>
-         <TextField id="BMITextfield1" layoutX="30.0" layoutY="98.0" />
+         <TextField fx:id="BMITextfield1" layoutX="30.0" layoutY="98.0" />
         <Button layoutX="243.0" layoutY="232.0" onAction="#onHelloButtonClick" text="Calculate BMI" />
-         <TextField id="BMITextfield2" layoutX="30.0" layoutY="158.0" />
+         <TextField fx:id="BMITextfield2" layoutX="30.0" layoutY="158.0" />
       
               <Label layoutX="30.0" layoutY="71.0" text="Weight (kg)" textFill="WHITE">
             <font>

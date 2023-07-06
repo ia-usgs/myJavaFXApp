@@ -23,7 +23,23 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        BMIMessageLabel.setText("testing" ); // Change to do the math between label 1 and 2
+        float a=Float.parseFloat(BMITextfield1.getText());
+        float b=Float.parseFloat(BMITextfield2.getText());
+        float bmi=b/(a*a);
+        BMIMessageLabel.setText("" + bmi);
+
+        if (bmi <= 18) {
+            BMIMessageLabel2.setText(" You are Seriously Underweight");
+        } else if (bmi <= 18.5) {
+            BMIMessageLabel2.setText("You are Underweight");
+        } else if (bmi <= 24.9) {
+            BMIMessageLabel2.setText("Normal Weight");
+        } else if (bmi <= 29.9) {
+            BMIMessageLabel2.setText("You are Overweight");
+        } else {
+            BMIMessageLabel2.setText("You are Obese");
+        }
+
     }
 }
 
