@@ -1,6 +1,7 @@
 package com.example.myjavafxapp;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -29,7 +30,12 @@ public class HelloController {
         BMIMessageLabel.setText("" + bmi);
 
         if (bmi <= 18) {
+            Alert z = new Alert(Alert.AlertType.WARNING);
+            z.setContentText("Please consult a doctor immediatly!");
+            z.setAlertType(Alert.AlertType.WARNING);
+            z.show();
             BMIMessageLabel2.setText(" You are Seriously Underweight");
+
         } else if (bmi <= 18.5) {
             BMIMessageLabel2.setText("You are Underweight");
         } else if (bmi <= 24.9) {
@@ -37,6 +43,10 @@ public class HelloController {
         } else if (bmi <= 29.9) {
             BMIMessageLabel2.setText("You are Overweight");
         } else {
+            Alert z = new Alert(Alert.AlertType.WARNING);
+            z.setContentText("Please consult a doctor immediatly!");
+            z.setAlertType(Alert.AlertType.WARNING);
+            z.show();
             BMIMessageLabel2.setText("You are Obese");
         }
 
