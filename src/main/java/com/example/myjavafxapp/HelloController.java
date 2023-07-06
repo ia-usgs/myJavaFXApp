@@ -3,17 +3,23 @@ package com.example.myjavafxapp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
-    @FXML
-    private Label BMICalcLabel;
+import java.util.Scanner;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        BMICalcLabel.setText("Welcome to JavaFX Application!");
-    }
+public class HelloController {
+
     @FXML
     private Label BMIMessageLabel;
 
     @FXML
     private Label BMIMessageLabel2;
+
+    //main button
+    @FXML
+    private Label BMICalcLabel;
+
+    @FXML
+    protected void onHelloButtonClick() {
+        BMICalcLabel.setText("testing" ); // Change to do the math between label 1 and 2
+    }
 }
+
